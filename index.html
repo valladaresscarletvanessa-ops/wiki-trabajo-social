@@ -1051,7 +1051,7 @@ pensadores, autores y referentes vinculados con el Trabajo Social.
 </section>
 
 <script>
-fetch("aportes.json")
+fetch(fetch("aportes.json?v=" + Date.now())
   .then(respuesta => respuesta.json())
   .then(aportes => {
     const lista = document.getElementById("lista-aportes");
