@@ -325,7 +325,8 @@ footer{
     <a href="#cronologia">Cronología</a>
     <a href="#publicaciones">Publicaciones</a>
     <a href="#participantes">Participantes</a>
-    <a href="#fuentes">Fuentes</a>
+    <a href="#fuentes">Fuentes</a> 
+    <a href="#aporta">Aporta a la Wiki</a>
 </nav>
 
 
@@ -999,6 +1000,47 @@ pensadores, autores y referentes vinculados con el Trabajo Social.
 <p>Trabajo Social</p>
 <p>2026</p>
 </footer>
+    <section id="aporta" class="aporta-section">
+
+    <h2>Aporta a la Wiki</h2>
+
+    <p class="aporta-intro">
+        ¿Encontraste información que puede enriquecer nuestra wiki?
+        Comparte tu aporte con el equipo para que podamos revisarlo
+        e incorporarlo a la página.
+    </p>
+
+    <div class="aporta-box">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre"
+               placeholder="Escribe tu nombre" required>
+
+        <label for="seccion">Sección de la Wiki</label>
+        <select id="seccion" name="seccion" required>
+            <option value="">Selecciona una sección</option>
+            <option>Biografía</option>
+            <option>Contexto histórico</option>
+            <option>Aportes al Trabajo Social</option>
+            <option>Publicaciones</option>
+            <option>Cronología</option>
+            <option>Otra</option>
+        </select>
+
+        <label for="aporte">Tu aporte</label>
+        <textarea id="aporte" name="aporte" rows="7"
+                  placeholder="Escribe aquí la información que deseas aportar..."
+                  required></textarea>
+
+        <label for="fuente">Fuente de información</label>
+        <input type="text" id="fuente" name="fuente"
+               placeholder="Libro, artículo, página web, etc." required>
+
+        <button type="submit">Enviar aporte</button>
+
+    </div>
+
+</section>
 
 </main>
 
