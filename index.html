@@ -1042,7 +1042,38 @@ pensadores, autores y referentes vinculados con el Trabajo Social.
     </form>
 
 </section>
+<section id="aportes-publicados">
+  <h2>Aportes de los participantes</h2>
 
+  <div id="lista-aportes">
+    <p>Cargando aportes...</p>
+  </div>
+</section>
+
+<script>
+fetch("aportes.json")
+  .then(respuesta => respuesta.json())
+  .then(aportes => {
+    const lista = document.getElementById("lista-aportes");
+
+    if (aportes.length === 0) {
+      lista.innerHTML = "<p>Aún no hay aportes publicados.</p>";
+      return;
+    }
+
+    lista.innerHTML = aportes.map(aporte => `
+      <article class="aporte-publicado">
+        <h3>${aporte.nombre}</h3>
+        <small>${aporte.fecha}</small>
+        <p>${aporte.aporte}</p>
+      </article>
+    `).join("");
+  })
+  .catch(error => {
+    document.getElementById("lista-aportes").innerHTML =
+      "<p>No se pudieron cargar los aportes.</p>";
+  });
+</script>
 </main>
 
 </body>
